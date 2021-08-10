@@ -24,7 +24,7 @@ export default class HomeScreen extends React.Component {
                         <Image source={require("../assets/star_map.png")}/>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.routeCard} onPress={this.props.navigation.navigate('DailyPic')}>
+                    <TouchableOpacity style={styles.routeCard} onPress={() => this.props.navigation.navigate('DailyPic')}>
                         <Text style={styles.routeText}>Daily Pictures</Text>
                         <Text style={styles.knowMore}>{"Know More -->"}</Text>
                         <Text style={styles.bgDigit}>3</Text>
