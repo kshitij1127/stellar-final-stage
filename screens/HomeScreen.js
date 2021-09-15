@@ -6,7 +6,7 @@ export default class HomeScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <SafeAreaView style={styles.droidSafeArea}/>
-                <ImageBackground source={require("../assets/space.gif")}>
+                <ImageBackground source={require("../assets/space.gif")} style={styles.backgroundImage}>
                     <View style={styles.titleBar}>
                         <Text style={styles.titleText}>Stellar</Text>
                     </View>
@@ -14,21 +14,21 @@ export default class HomeScreen extends React.Component {
                         <Text style={styles.routeText}>SpaceCrafts</Text>
                         <Text style={styles.knowMore}>{"Know More -->"}</Text>
                         <Text style={styles.bgDigit}>1</Text>
-                        <Image source={require("../assets/spacecraft.png")}/>
+                        <Image source={require("../assets/spacecraft.png")} style={styles.iconImage}/>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.routeCard} onPress={() => this.props.navigation.navigate('StarMap')}>
                         <Text style={styles.routeText}>Star Map</Text>
                         <Text style={styles.knowMore}>{"Know More -->"}</Text>
                         <Text style={styles.bgDigit}>2</Text>
-                        <Image source={require("../assets/star_map.png")}/>
+                        <Image source={require("../assets/star_map.png")} style={styles.iconImage}/>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.routeCard} onPress={() => this.props.navigation.navigate('DailyPic')}>
                         <Text style={styles.routeText}>Daily Pictures</Text>
                         <Text style={styles.knowMore}>{"Know More -->"}</Text>
                         <Text style={styles.bgDigit}>3</Text>
-                        <Image source={require("../assets/photo.png")}/>
+                        <Image source={require("../assets/daily_pictures.png")} style={styles.iconImage}/>
                     </TouchableOpacity>
                 </ImageBackground>
             </View>
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
       height: 200,
       width: 200,
       resizeMode: "contain",
-      right: 20,
-      top: -80,
+      right: 115,
+      top: -10,
     },
 })
